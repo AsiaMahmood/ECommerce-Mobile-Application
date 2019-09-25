@@ -1,0 +1,35 @@
+page-shop-post {
+    ion-title{
+        cursor: pointer;
+    }
+    
+    img{
+        padding: 15px;
+        max-height:400px;
+    }
+    .main{
+        margin: 0 10px 0 10px;
+    }
+    .main > button{
+        margin-right: 20%;
+    }
+
+    .item1{
+        float: right;
+        margin-right: 5px;
+    }
+    .item2{
+        background: url(../../assets/icon/chat.png);
+        width: 24px;
+        height: 24px;
+        background-size: cover;
+        margin-left: 15px;
+        float: left;
+    }
+    .time{
+        float: right;
+        padding:  0 10px 0 10px;
+        color: #aaaaaa;
+    }
+
+}

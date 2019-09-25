@@ -1,0 +1,23 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title text-center>المتاجر</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-list>
+    <ion-item   (click)="openShopProfile(shop);">
+      <ion-avatar item-start >
+        <img src="assets/imgs/profile.jpg">
+      </ion-avatar>
+      <h2>{{shop}}</h2>
+    </ion-item>
+  </ion-list>
+</ion-content>

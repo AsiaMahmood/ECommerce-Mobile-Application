@@ -1,0 +1,22 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+  <ion-title text-center>التحکم</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list>
+    <ion-item>
+      <button ion-button block round class='item-report' (click)="gotoReportedPostPage();">  الابلاغات</button></ion-item>
+    <ion-item class='item-start'>الاحصائيات :</ion-item>
+    <ion-item>   {{userCounter-1}} مستخدم</ion-item>
+    <ion-item>{{postCounter}} منشورات</ion-item>
+  </ion-list>
+
+</ion-content>

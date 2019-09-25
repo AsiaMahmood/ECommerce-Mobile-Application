@@ -1,0 +1,73 @@
+<ion-content padding>
+
+<!-- User Background Image -->
+  <div id="profile-bg" [ngStyle]="{'background-image': 'url(' + user.coverImage +')'}" >
+
+       <button  (click)="backToLastPage();">
+          <ion-icon color="light" name="arrow-round-back"></ion-icon>
+        </button>
+
+            <button class="edit" *ngIf="checkUser">
+              <img src="assets/icon/edit.png" alt="">
+            </button>
+
+  </div>
+
+  <div id="content">
+    <div id="profile-info" padding>
+      <img id="profile-image" src="{{user.profileImage}}">
+      <h3 id="profile-name">{{user.username}}</h3>
+      <p>{{user.occupation}} </p>
+      <p class="profile-description">{{user.description}}</p>
+      <button ion-button *ngIf="!checkUser" (click)='gotoChatPage(user.uid);' small >ارسل رسالة</button>
+    </div>
+    <hr/>
+    <ion-row class="profile-numbers">
+      <ion-col col-4>
+        <p>الاعلانات</p>
+        <span>{{postNumber}}</span>
+      </ion-col>
+      <ion-col col-4>
+        <!-- Add something new -->
+      </ion-col>
+      <ion-col col-4>
+        <!-- Add something new -->
+      </ion-col>
+    </ion-row>
+  </div>
+      
+  <!-- Show posts -->
+  <div id="posts">
+    <ion-card *ngFor="let post of posts ">
+      <ion-item (click)="gotoShopProfilePage(post.UserId);" >
+        <ion-avatar item-start>
+          <img [src]="post.profileImage">
+        </ion-avatar>
+        <h2 class="sticky">{{post.username}}</h2>
+        <p>{{post.date}}</p>
+      </ion-item>
+      <div (click)="gotoPostPage(post);">
+        <img [src]="post.Image">
+      </div>
+
+      <ion-card-content>
+        <div class="main">
+            <p class="item1">السعر: {{post.Price}}دينار</p>
+            <div class="chatIcon" (click)='gotoChatPage(post.UserId);' *ngIf="!checkUser">
+            </div>
+          </div>
+        <br><br>
+        <p class="time" light>{{post.Time}}</p> 
+      </ion-card-content>
+      
+    </ion-card>
+  </div>
+
+    <!-- fab placed to the top end -->
+    <ion-fab bottom right>
+        <button ion-fab (click)="goToAddPostPage();">
+          <ion-icon name="ios-add"></ion-icon>
+        </button>
+      </ion-fab>
+
+</ion-content>

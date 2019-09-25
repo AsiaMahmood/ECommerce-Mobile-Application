@@ -1,0 +1,34 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title text-center>ابلاغ</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list radio-group [(ngModel)]="choice">
+
+    <ion-item>
+      <ion-label>يحض على الكراهية</ion-label>
+      <ion-radio style="margin: 0 0 0 5px;" item-left value="1"></ion-radio>
+    </ion-item>
+    <ion-item>
+        <ion-label>محتوى غير ملائم</ion-label>
+        <ion-radio style="margin: 0 0 0 5px;" item-left  value="2"></ion-radio>
+      </ion-item>
+      <ion-item>
+          <ion-label>سلوك مسيء</ion-label>
+          <ion-radio style="margin: 0 0 0 5px;"  item-left value="3"></ion-radio>
+      </ion-item>
+            <ion-item>
+          <ion-label>محتوى ينتهك حقوقي</ion-label>
+          <ion-radio style="margin: 0 0 0 5px;" item-left  value="4"></ion-radio>
+      </ion-item>
+
+  </ion-list>
+
+  <button ion-button round class="send" (click)="sendReport();">ارسال</button>
+  
+</ion-content>

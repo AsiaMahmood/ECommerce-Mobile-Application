@@ -1,0 +1,28 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title text-center>الاعلان</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <div class="container">
+      <button class="dots" (click)="presentPopover($event);"></button>
+      <img [src]=post.Image>
+  </div>
+<div class="main">
+
+    <p class="item1">السعر: {{post.Price}}دينار</p>
+
+    <div class="chatIcon" (click)='gotoChatPage(post.UserId);' *ngIf="!checkUser">Asia</div>
+
+    <br><br>
+    <p class="details">  
+        {{post.Description}}
+      </p>
+</div>
+
+
+</ion-content>

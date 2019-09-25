@@ -1,0 +1,47 @@
+page-post {
+
+    .container{
+        position: relative;
+    }
+    img{
+        max-height: 400px;
+    }
+
+    // three dots
+    .dots{
+        position: absolute;
+        top:0px;
+        left:10px;
+    }
+    .dots:after {
+        content: '\2807';
+        font-size: 24px;
+        color: #D56365;
+    }
+    .dots:hover{
+        cursor: pointer;
+    }
+
+    // chat icon with price
+    .item1{
+        float: right;
+        margin-right: 5px;
+    }
+    .item2{
+        background: url(../../assets/icon/chat.png);
+        width: 24px;
+        height: 24px;
+        background-size: cover;
+        margin-left: 15px;
+        margin-top: 20px;
+        float: left;
+        padding: 5px;
+    }
+
+    .item2:hover{
+        background-color: #ddd;
+    }
+    .main > button{
+        margin-right: 20%;
+    }
+}

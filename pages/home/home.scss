@@ -1,0 +1,47 @@
+page-home {
+    ion-content{
+        background: linear-gradient(0deg, #eeeef1 0%, white 80%, white 100%);
+    }
+    button,
+    ion-button,
+    .button-md,
+    .button-ios {
+    text-transform: none !important;
+    }
+    p {
+    color: #444;
+    }
+    // Posts feed
+    #posts {
+        text-align: justify;
+    }
+
+    img{
+        max-height:500px;
+    }
+    .main{
+        margin: 0 10px 5px 10px;
+    }
+    .main > button{
+        margin-right: 20%;
+    }
+
+    .item1{
+        float: right;
+        margin-right: 5px;
+    }
+    .chatIcon{
+        background: url(../../assets/icon/chat.png);
+        width: 24px;
+        height: 24px;
+        background-size: cover;
+        margin-left: 15px;
+        float: left;
+    }
+    .time{
+        float: right;
+        padding:  0 10px 0 10px;
+        color: #aaaaaa;
+    }
+
+}

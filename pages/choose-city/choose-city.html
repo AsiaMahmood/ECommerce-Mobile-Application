@@ -1,0 +1,18 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title text-center>اختر المحافظة</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-item text-center>
+        <ion-label>المحافظة</ion-label>
+        <ion-select (ionCancel)="onCancel()"  (ionChange)="onChange()">  
+          <ion-option *ngFor="let city of cities" [value]="city.name">{{city.name}}</ion-option>
+        </ion-select>
+      </ion-item>
+</ion-content>

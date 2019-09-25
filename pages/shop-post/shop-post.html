@@ -1,0 +1,53 @@
+<ion-header>
+
+    <ion-navbar>
+      <ion-title (click)="openShopProfile();" text-center>{{shop.username}}</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content>
+      <ion-card>
+  
+          <div (click)="post();">
+              <img src="assets/imgs/first.jpg">
+          </div>
+      
+          <div class="main">
+      
+              <p class="item1">السعر: 20000دينار</p>
+      
+              <div class="chatIcon">
+              </div>
+      
+          </div>
+      
+          <br><br>
+      
+          <p class="time" light>11h ago</p>  
+                  
+        </ion-card>    
+        <ion-card>
+  
+            <div (click)="post();">
+                <img src="assets/imgs/third.jpg">
+            </div>
+        
+            <div class="main">
+        
+                <p class="item1">السعر: 20000دينار</p>
+        
+                <div class="chatIcon">
+                </div>
+        
+            </div>
+        
+            <br><br>
+        
+            <p class="time" light>11h ago</p>  
+                    
+        </ion-card>    
+        
+  </ion-content>
+  

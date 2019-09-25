@@ -1,0 +1,46 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title text-center>اضافة اعلان</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <div class="add-image">
+  
+    <img src="assets/imgs/no-image.png" alt="">
+
+    <ion-fab right >
+      <button ion-fab color="light">
+      </button>
+    </ion-fab>
+
+  </div>
+
+  <ion-list>
+
+      <ion-item>
+          <ion-input type="text" placeholder="السعر"></ion-input>
+      </ion-item>
+      <ion-item>
+      </ion-item>
+
+      <!-- Choose dept -->
+      <ion-item>
+          <ion-label>القسم</ion-label>
+          <ion-select (ionCancel)="onCancel();"  (ionChange)="onChange();">  
+            <ion-option *ngFor="let city of cities" [value]="city.name">{{city.name}}</ion-option>
+          </ion-select>
+      </ion-item>
+    
+        <button ion-button primary round full class="add-btn">اضافة اعلان</button>
+
+
+  </ion-list>
+
+
+
+</ion-content>

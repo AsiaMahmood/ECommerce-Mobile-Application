@@ -1,0 +1,28 @@
+<ion-header>
+
+  <ion-navbar>
+    
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title text-center>عن التطبيق</ion-title>
+    
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <p class="title">تسوق معنا</p>
+  <div class="text"> مرحباً بكم في Vova، مركز التسوق الشامل عبر الإنترنت، الذي يقدم ملايين المنتجات بأسعار مناسبة وجودة عالية. نحن نضع بين يديكم معلومات عن سلع عالمية بأسعار معقولة، سلع بها تصميماتكم المفضلة وأكسسوارات شعبية.
+
+Vova هي شركة تجارة إلكترونية عالمية. بعد تحقيق نجاح كبير، بدأنا نستكشف المزيد من مجالات التطوير للعمل بها – فألقوا نظرة عليها وانضموا إلينا!</div>
+  
+  <p class="title">ارسل مقترحاتك</p>
+  <ion-item>
+      <ion-textarea placeholder="اكتب هنا . . ."  [(ngModel)]="this.suggest"></ion-textarea>    
+  </ion-item>
+  <button ion-button primary block class="submit" (click)="send(suggest);">ارسال</button>  
+  <button ion-button primary block class="submit">قيم التطبيق</button>  
+
+</ion-content>

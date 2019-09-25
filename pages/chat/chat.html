@@ -1,0 +1,58 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title text-center>{{toUser.username}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+    <div *ngFor="let message of messages" class="message-wrapper">
+      <div *ngIf="currentuser.uid !== message.currentuser">
+        <img  class="profile-pic left"  src="{{toUser.profileImage}}"  />
+        <!--  wave -->
+        <div class="chat-bubble left slide-left">
+  
+          <div class="message" [innerHTML]="message.messageText" autolinker>
+          </div>
+  
+          <div class="message-detail">
+            <span  class="bold">{{toUser.username}}</span>,
+            <span>{{message.time}}</span>
+          </div>
+  
+        </div>
+      </div>
+  
+      <div *ngIf="currentuser.uid === message.currentuser">
+  
+        <img  class="profile-pic right" src="{{currentuser.profileImage}}" />
+  
+        <div class="chat-bubble right slide-right">
+  
+          <div class="message" [innerHTML]="message.messageText" autolinker>
+          </div>
+  
+          <div class="message-detail">
+            <span  class="bold">{{currentuser.username}}</span>,
+            <span>{{message.time}}</span>
+          </div>
+  
+        </div>
+  
+      </div>
+  
+      <div class="cf"></div>
+  
+  </div>
+</ion-content>
+
+
+<ion-footer>
+
+		<ion-item>
+			<ion-input  placeholder="ارسل رسالة ..." [(ngModel)]="chatBox"></ion-input>
+			<button ion-button clear  item-end (click)="send(chatBox)"><ion-icon class="footer-btn" name="send"></ion-icon></button>
+		</ion-item>
+
+</ion-footer>

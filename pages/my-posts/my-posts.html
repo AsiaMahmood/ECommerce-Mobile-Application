@@ -1,0 +1,39 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+  <ion-title text-center>اعلاناتي</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<!-- Show posts -->
+<div id="posts">
+  <ion-card *ngFor="let post of posts ">
+    <ion-item (click)="gotoShopProfilePage(post.UserId)" >
+      <ion-avatar item-start>
+        <img [src]="post.profileImage">
+      </ion-avatar>
+      <h2 class="sticky">{{post.username}}</h2>
+      <p>{{post.date}}</p>
+    </ion-item>
+    <div (click)="gotoPostPage(post , post.UserId);">
+      <img [src]="post.Image">
+    </div>
+
+    <ion-card-content>
+      <div class="main">
+          <p class="item1">السعر: {{post.Price}}دينار</p>
+        </div>
+      <br><br>
+      <p class="time" light>{{post.Time}}</p> 
+    </ion-card-content>
+    
+  </ion-card>
+</div>
+
+</ion-content>

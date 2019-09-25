@@ -1,0 +1,38 @@
+<ion-header>
+
+  <ion-navbar>
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title text-center>تسجيل الدخول</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+
+    <ion-item>
+      <ion-label floating>البريد الالكتروني</ion-label>
+      <ion-input type="text" [(ngModel)]="user.email"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label floating>الرمز السري</ion-label>
+      <ion-input type="password" [(ngModel)]="user.password"></ion-input>
+    </ion-item>
+    
+  </ion-list>
+
+  <button class="forgotPassword" small color="light" (click)="gotoResetPasswordPage();">نسيت الرمز السري؟</button>
+
+  <div padding>
+    <button block ion-button (click)="loginUser(user);" item-left round>تسجيل الدخول</button>
+  </div>
+
+  <div padding>
+    <button block ion-button (click)="gotoSignupPage();" item-left round>انشاء حساب</button>
+  </div>
+  
+</ion-content>
